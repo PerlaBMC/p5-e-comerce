@@ -1,8 +1,7 @@
 import axios from "axios";
 
-// const URL_ROOT = `http://localhost:4000/api/productos`;
-const URL_ROOT =
-  "http://localhost:4001/api/productsclass";
+const URL_ROOT = `https://p5-backend-e-comerce.onrender.com/api/productsclass`;
+//const URL_ROOT = "http://localhost:4001/api/productsclass";
 
 const getProductsService = async () => {
   const response = await axios.get(`${URL_ROOT}`);
