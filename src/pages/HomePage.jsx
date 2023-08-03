@@ -1,3 +1,7 @@
+import {Component} from "react"
+import ReactPlayer from "react-player";
+import { NavLink } from "react-router-dom";
+
 const HomePage = () => {
   const bodyStyle = {
     backgroundImage: "linear-gradient(to right, WhiteSmoke , WhiteSmoke, Thistle)"
@@ -19,7 +23,7 @@ const HomePage = () => {
     }
     
      const cardsStyle = {
-      backgroundColor: 'white',
+     
       paddingBottom: "50px"
     }
     
@@ -59,6 +63,7 @@ const HomePage = () => {
       height: '330px', 
       margin: '5px',
       borderRadius: "9px",
+      
     }
 
   return (
@@ -92,73 +97,73 @@ const HomePage = () => {
 
 <div className='col'>
   <h1 class="font-effect-neon" style={presentName}>UNOUNOSHIRTS x LY DIEGO</h1>  <br /> 
-  <p style={{textAlign: "center", fontSize: 20, fontFamily: "'Courier New', monospace"}}>
-  Todas las piezas son pintadas a mano, bajo pedido, esto <br /> 
-  garantiza que el producto que adquieres será pintado exclusivamente para ti. <br /> <br /> 
-  El trabajo es realizado con pinturas textiles y acrílicas <br /> hechas en México. <br /><br />
-  Tus prendas pueden lavarse en máquina, plancharse y <br /> seguirán luciendo fantásticas.</p>
+  <p style={{textAlign: "center", fontSize: 23, fontFamily: "'Courier New', monospace"}}>
+  Todas las piezas son pintadas a mano, bajo pedido, esto 
+  garantiza que el producto que adquieres será pintado exclusivamente para ti. 
+  El trabajo es realizado con pinturas textiles y acrílicas hechas en México. <br /><br />
+  Tus prendas pueden lavarse en máquina, plancharse y seguirán luciendo fantásticas.</p>
 </div>
 </div>
 </div>
+
+<div id="carouselExample" class="carousel slide">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1690943401/nuevo_tama%C3%B1o_gxyoon.png" class="d-block w-100"   alt="street fashion"/>
+    </div>
+</div>
+</div>
+<br />
 
 <div style={cardsStyle}>
 <div className="container text-center">
   <div className="row">
     <div className="col-md"> 
-    <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1689525601/12_hfgnvz.png" className="rounded float-start" alt="Helga Patiki" width={320} />
-    <button style={buttonStyle1}>
-    
-      Hey Patinki!
-    
+    <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1690950438/Dise%C3%B1o_sin_t%C3%ADtulo_2_nbqwgw.png" className="rounded float-start" alt="Helga Patiki" width={350} />
+    <button style={buttonStyle3}>
+    <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+               aria-current="page"
+                to="/collection"
+              >
+               Hey Patinki!
+              </NavLink>
     </button>
     </div>
     <div className="col-md">
-    <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1689525609/13_vd6woc.png" className="rounded mx-auto d-block" alt="Lisa" width={320}/>
-    <button style={buttonStyle2}>Lisa M. Simpson</button>
+    <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1690949665/16_nuf7lo.png" className="rounded mx-auto d-block" alt="Lisa" width={350}/>
+    <button style={buttonStyle3}>
+    <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+               aria-current="page"
+                to="/collection2"
+              >
+               Lisa Simpson
+              </NavLink>
+    </button>
     </div>
     <div className="col-md">
-    <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1689525602/14_buoqcf.png"  alt="Aneglica" width={320} />
+    <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1690949668/19_utnxmj.png"  alt="Aneglica" width={350} />
     <button style={buttonStyle3}>Angelica Pickles</button>
     </div>
   </div>
 </div>
+</div>   
 </div>
+   
 
-<div className="container text-center">
-  <div className="row row-cols-1 row-cols-md-3 g-5">
-    <div className="col">     
-    <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1689539510/britney-snake_cte0ym.png" style={imgCrds} alt='1'/>
-    <p>SLAVE 4 U <br /><b>$599.00 MXN</b></p></div>
-    <div className="col">    
-    <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1688428587/vogue_vhmhts.png" style={imgCrds} alt='2' />
-      <p>BRING BACK MY GIRL (B&W) <br /><b>$599.00</b></p></div>
-    <div className="col"> 
-    <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1689539443/tifannys_tj2gzy.png" style={imgCrds} alt='3' />
-      <p>MOON RIVER<br /><b>$599.00 MXN</b></p></div>
-    <div className="col">
-      <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1689539236/cruella_cou8cy.png" style={imgCrds} alt='4' />
-      <p>CRUELLA<br /><b>$610.00 MXN</b></p></div>
-    <div className="col">
-      <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1689539235/him_vsmpgw.png" style={imgCrds} alt='5' />
-      <p>HIM<br /><b>$610.00 MXN</b></p></div>
-    <div className="col">
-      <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1689539236/the-devil-w-prada_carmpn.png" style={imgCrds} alt='6' />
-      <p>THE DEVIL W PRADA<br /><b className="w3-text-red">$601.00 MXN</b></p></div>
-    <div className="col">
-      <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1689539236/I-didnt-again_ibladr.png" style={imgCrds} alt='7' />
-      <p>I DID IT AGAIN<br /><b>$599.00 MXN</b></p></div>
-    <div className="col">
-      <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1689539236/life-in-plastic_mqfunr.png" style={imgCrds} alt='8' />
-      <p>LIFE IN PLASTIC<br /><b>$600.00 MXN</b></p></div>
-    <div className="col">    <div className="col">
-      <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1689539516/barbie_zl1m5e.png" style={imgCrds} alt='9' />
-      <p>STACY MALIBU<br /><b>$640.00 MXN</b></p></div>
-    <div className="col"></div>
-    </div>
-  
-  </div>
-</div>
-</div>
+
+ 
+
+
+
+
+
+
 </>
   );
 };

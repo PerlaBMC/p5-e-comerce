@@ -1,16 +1,43 @@
 import axios from "axios";
 
-const URL_ROOT = `https://p5-backend-e-comerce.onrender.com/api/productsclass`;
+const URL_ROOT = `https://p5-backend-e-comerce.onrender.com/api`;
 //const URL_ROOT = "http://localhost:4001/api/productsclass";
 
 const getProductsService = async () => {
-  const response = await axios.get(`${URL_ROOT}`);
+  const response = await axios.get(`${URL_ROOT}/productsclass`);
   return response;
 };
 
 const getProductService = async (id) => {
-  const response = await axios.get(`${URL_ROOT}/${id}`);
+  const response = await axios.get(`${URL_ROOT}/productsclass/${id}`);
   return response;
 };
 
-export { getProductsService, getProductService };
+const getCollectionsService = async () => {
+  const response = await axios.get(`${URL_ROOT}/collections`);
+  return response;
+}; 
+
+const getCollectionService = async (id) => {
+  const response = await axios.get(`${URL_ROOT}/collections/${id}`); 
+  return response;
+};
+
+const getCollections2Service = async () => {
+  const response = await axios.get(`${URL_ROOT}/collections2`);
+  return response;
+}; 
+
+const getCollection2Service = async (id) => {
+  const response = await axios.get(`${URL_ROOT}/collections2/${id}`); 
+  return response;
+};
+
+export { 
+  getProductsService, 
+  getProductService, 
+  getCollectionsService, 
+  getCollectionService,
+  getCollections2Service,
+  getCollection2Service
+};

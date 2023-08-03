@@ -15,10 +15,13 @@ import ProductsPage from "../pages/ProductsPage";
 import ProductPage from "../pages/ProductPage";
 import CartPage from "../pages/CartPage";
 import ProfilePage from "../pages/ProfilePage";
+import CollectionPage from "../pages/CollectionPage";
+import Collection2Page from "../pages/Collection2Page";
 
 import { useContext, useEffect } from "react";
 import AuthContext from "../context/AuthContext";
 import Footer from "../components/Footer";
+
 
 const AppRouter = () => {
   const { renewToken, user } = useContext(AuthContext);
@@ -34,6 +37,8 @@ const AppRouter = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/collection" element={<CollectionPage />} />
+          <Route path="/collection2" element={<Collection2Page />} />
           <Route path="/products/:id" element={<ProductPage />} />
           <Route path="/cart" element={<CartPage />} />
 

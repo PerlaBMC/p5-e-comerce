@@ -3,14 +3,16 @@ import ProductContext from "../context/ProductContext";
 import { useParams } from "react-router-dom";
 
 const ProductPage = () => {
-  const { getProduct, product } = useContext(ProductContext);
+  const { getProduct, getCollection, product} = useContext(ProductContext);
   const { id } = useParams();
 
   useEffect(() => {
-    getProduct(id);
-  }, [getProduct, id]);
+  getProduct(id);
+  getCollection(id)
+  
+}, [getProduct, id] [getCollection, id]);
 
-
+ 
   return (
     <>
       <section className="row">
