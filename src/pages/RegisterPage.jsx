@@ -24,17 +24,24 @@ const RegisterPage = () => {
     await registrarUsuario(form);
 
     setForm(initForm);
+
   };
 
   return (
     <>
       <header className="row col">
-        <h1>Register Page</h1>
+        <h1 style={{  
+       color: "MediumAquaMarine", 
+       textAlign: "center",
+       textShadow: "2px 2px 5px  LightGreen",
+       paddingTop: "15px",
+       fontFamily: "Georgia"
+       }}>¡¡ Crea tu cuenta !!</h1>
       </header>
       <main className="row">
         <article className="col">
-          <form onSubmit={handleSubmit}>
-            <div className="mb-3">
+          <form onSubmit={handleSubmit} className="container" style={{}}>
+            <div className="mb-3 ">
               <label htmlFor="inputUserName" className="form-label">
                 User name
               </label>
@@ -60,17 +67,21 @@ const RegisterPage = () => {
                 onChange={handleChange}
               />
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn" style={{backgroundColor: "MediumAquaMarine", color: "white"}}>
               Crear cuenta
             </button>
           </form>
         </article>
       </main>
-      <section className="row">
-        <article className="col">
-          <pre>{JSON.stringify(user, null, 2)}</pre>
-        </article>
-      </section>
+      <div id="carouselExample" class="carousel slide">
+       <div class="carousel-inner">
+         <div class="carousel-item active">
+         <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1690943401/nuevo_tama%C3%B1o_gxyoon.png" class="d-block w-100"   alt="street fashion"/>
+        </div>
+      </div>
+     </div>
+
+
     </>
   );
 };

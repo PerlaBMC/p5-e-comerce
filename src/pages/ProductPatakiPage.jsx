@@ -2,13 +2,13 @@ import { useContext, useEffect } from "react";
 import ProductContext from "../context/ProductContext";
 import { useParams } from "react-router-dom";
 
-const ProductPage = () => {
-  const { getProduct, product} = useContext(ProductContext);
+const ProductPataki = () => {
+  const { getCollection, product} = useContext(ProductContext);
   const { id } = useParams();
 
   useEffect(() => {
-  getProduct(id);
-}, [getProduct, id]);
+    getCollection(id);
+}, [getCollection, id]);
 
  
   return (
@@ -45,4 +45,4 @@ const ProductPage = () => {
   );
 };
 
-export default ProductPage;
+export default ProductPataki;

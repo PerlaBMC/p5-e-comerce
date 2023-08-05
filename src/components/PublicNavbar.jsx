@@ -37,7 +37,7 @@ const PublicNavbar = () => {
                 className={({ isActive }) =>
                   isActive ? "nav-link active" : "nav-link"
                 }
-                style={{color: "LightGreen", fontFamily: "'Courier New', monospace", fontSize: "25px"}}
+                style={{color: "MediumAquaMarine", fontFamily: "Georgia", fontSize: "30px"}}
                 aria-current="page"
                 to="/products"
               >

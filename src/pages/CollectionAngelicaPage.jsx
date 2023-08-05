@@ -2,16 +2,16 @@ import { useContext, useEffect } from "react";
 import ProductContext from "../context/ProductContext";
 import { Link } from "react-router-dom";
 
-const Collection2Page = () => {
-    const { getCollections2, products, addCollection2 } = useContext(ProductContext);
+const CollectionAngelicaPage = () => {
+    const { getCollections3, products, addCollection3 } = useContext(ProductContext);
 
     const handleAddProduct = (id) => {
-        addCollection2(id);
+        addCollection3(id);
     };
   
     useEffect(() => {
-      getCollections2();
-    }, [getCollections2]);
+      getCollections3();
+    }, [getCollections3]);
   
     return (
       
@@ -41,7 +41,7 @@ const Collection2Page = () => {
                       </svg>
                     </button>
                     <Link
-                      to={`/products/${product.id}`}
+                      to={`/productAngelica/${product.id}`}
                       className="btn btn-lg"
                     >
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-postcard-heart" viewBox="0 0 16 16">
@@ -59,4 +59,4 @@ const Collection2Page = () => {
     );
 }
 
-export default Collection2Page
+export default CollectionAngelicaPage

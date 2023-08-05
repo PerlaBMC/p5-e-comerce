@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const URL_ROOT = `https://p5-backend-e-comerce.onrender.com/api`;
-//const URL_ROOT = "http://localhost:4001/api/productsclass";
+//const URL_ROOT = "http://localhost:4001/api";
 
 const getProductsService = async () => {
   const response = await axios.get(`${URL_ROOT}/productsclass`);
@@ -33,11 +33,23 @@ const getCollection2Service = async (id) => {
   return response;
 };
 
+const getCollections3Service = async () => {
+  const response = await axios.get(`${URL_ROOT}/collections3`);
+  return response;
+}; 
+
+const getCollection3Service = async (id) => {
+  const response = await axios.get(`${URL_ROOT}/collections3/${id}`); 
+  return response;
+};
+
 export { 
   getProductsService, 
   getProductService, 
   getCollectionsService, 
   getCollectionService,
   getCollections2Service,
-  getCollection2Service
+  getCollection2Service,
+  getCollections3Service,
+  getCollection3Service
 };

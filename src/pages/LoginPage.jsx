@@ -28,12 +28,20 @@ const LoginPage = () => {
 
   return (
     <>
-      <header className="row col">
-        <h1>Login Page</h1>
-      </header>
-      <main className="row">
+    <div style={{backgroundImage: "linear-gradient(to right, WhiteSmoke , WhiteSmoke, Thistle)"}}>
+
+      <h1 style={{  
+       color: "white", 
+       textAlign: "center",
+       textShadow: "2px 2px 5px  purple",
+       paddingTop: "15px",
+       fontFamily: "Georgia",
+       paddingBottom: "20px"
+       }}>Ingresa a tu perfil</h1>
+
+      <main className="container" > 
         <article className="col">
-          <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit} >
             <div className="mb-3">
               <label htmlFor="inputUserName" className="form-label">
                 User name
@@ -60,17 +68,36 @@ const LoginPage = () => {
                 onChange={handleChange}
               />
             </div>
-            <button type="submit" className="btn btn-primary">
+            <button type="submit" className="btn" style={{backgroundColor: "plum", color: "white"}}>
               Iniciar sesion
             </button>
           </form>
         </article>
-      </main>
-      <section className="row">
-        <article className="col">
-          <pre>{JSON.stringify(user, null, 2)}</pre>
-        </article>
-      </section>
+        </main>
+    
+<div id="carouselExample" className="carousel slide">
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1690942147/9_brx1g2.png" className="d-block w-100" alt="..." />
+    </div>
+    <div className="carousel-item">
+      <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1690942146/7_kc3hui.png" className="d-block w-100" alt="..." />
+    </div>
+    <div className="carousel-item">
+      <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1690942147/8_uofu8o.png" className="d-block w-100" alt="..." />
+    </div>
+  </div>
+  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true" />
+    <span className="visually-hidden">Previous</span>
+  </button>
+  <button className="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true" />
+    <span className="visually-hidden">Next</span>
+  </button>
+</div>
+
+        </div>
     </>
   );
 };

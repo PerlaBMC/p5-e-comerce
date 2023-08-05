@@ -1,5 +1,3 @@
-import {Component} from "react"
-import ReactPlayer from "react-player";
 import { NavLink } from "react-router-dom";
 
 const HomePage = () => {
@@ -27,25 +25,6 @@ const HomePage = () => {
       paddingBottom: "50px"
     }
     
-    const buttonStyle1 = {
-      height: 35,
-      width: 300,
-      backgroundColor: "#FAD5E5",
-      cursor: "pointer",
-      borderRadius: "9px",
-      borderStyle: "none",
-      color: "Magenta"
-    }
-    
-    const buttonStyle2 = {
-      height: 35,
-      width: 300,
-      backgroundColor: "#6C37CC",
-      cursor: "pointer",
-      borderRadius: "9px",
-      borderStyle: "none",
-      color: "Thistle"
-    }
     
     const buttonStyle3 = {
       height: 35,
@@ -57,14 +36,6 @@ const HomePage = () => {
       color: "Indigo"
     }
     
-    
-    const imgCrds = {
-      width: '280px', 
-      height: '330px', 
-      margin: '5px',
-      borderRadius: "9px",
-      
-    }
 
   return (
   <>
@@ -126,9 +97,9 @@ const HomePage = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }
                aria-current="page"
-                to="/collection"
+                to="/collectionPataki"
               >
-               Hey Patinki!
+               Hey Patakii!
               </NavLink>
     </button>
     </div>
@@ -140,7 +111,7 @@ const HomePage = () => {
                   isActive ? "nav-link active" : "nav-link"
                 }
                aria-current="page"
-                to="/collection2"
+                to="/collectionLisa"
               >
                Lisa Simpson
               </NavLink>
@@ -148,7 +119,17 @@ const HomePage = () => {
     </div>
     <div className="col-md">
     <img src="https://res.cloudinary.com/dujrua0vo/image/upload/v1690949668/19_utnxmj.png"  alt="Aneglica" width={350} />
-    <button style={buttonStyle3}>Angelica Pickles</button>
+    <button style={buttonStyle3}>
+    <NavLink
+                className={({ isActive }) =>
+                  isActive ? "nav-link active" : "nav-link"
+                }
+               aria-current="page"
+                to="/collectionAngelica"
+              >
+               Angelica Pickles
+              </NavLink>
+    </button>
     </div>
   </div>
 </div>

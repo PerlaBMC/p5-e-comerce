@@ -11,7 +11,7 @@ const Footer = () => {
        <div className="container p-3" >
         <div className="row mt-3" style={{paddingTop: "30px", textAlign: "center", backgroundColor: "rgba(208, 184, 202, 0.6)", borderRadius: "30px"}}>
             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 className="text-uppercase">Contactanos</h5>
+              <h5 className="text-uppercase">Contáctanos</h5>
               <ul className="list-unstyled mb-0">
                 <li>
                   <p className="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16" color="green">
@@ -26,7 +26,7 @@ const Footer = () => {
              </ul>
             </div>
             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 className="text-uppercase">Siguenos</h5>
+              <h5 className="text-uppercase">Síguenos</h5>
               <ul className="list-unstyled">
                 <li>
                 <a className="card-text" href="https://www.facebook.com/UNOUNOSHIRTS"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-heart" viewBox="0 0 16 16">
@@ -41,7 +41,7 @@ const Footer = () => {
           </ul>
             </div>
             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 className="text-uppercase">Visitanos</h5>
+              <h5 className="text-uppercase">Visítanos</h5>
               <ul className="list-unstyled">
                 <li>
                 <p className="card-text"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-shop-window" viewBox="0 0 16 16">
@@ -56,24 +56,18 @@ const Footer = () => {
              </ul>
             </div>
             <div className="col-lg-3 col-md-6 mb-4 mb-md-0">
-              <h5 className="text-uppercase">Write to us</h5>
+              <h5 className="text-uppercase">Imaginemos juntos</h5>
               <ul className="list-unstyled">
                 <li>
-                  <a href="#!" className="text-white">
+                  <a href="#!" className="text-black">
                     <i className="fas fa-at fa-fw fa-sm me-2" />
-                    Help in purchasing
+                    Mandanos tus propuestas de diseño
                   </a>
                 </li>
                 <li>
-                  <a href="#!" className="text-white">
+                  <a href="#!" className="text-black">
                     <i className="fas fa-shipping-fast fa-fw fa-sm me-2" />
-                    Check the order status
-                  </a>
-                </li>
-                <li>
-                  <a href="#!" className="text-white">
-                    <i className="fas fa-envelope fa-fw fa-sm me-2" />
-                    Join the newsletter
+                    Te enseñamos a diseñar
                   </a>
                 </li>
               </ul>

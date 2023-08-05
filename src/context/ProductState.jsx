@@ -10,7 +10,9 @@ import {
   getCollectionsService,
   getCollectionService,
   getCollections2Service,
-  getCollection2Service
+  getCollection2Service, 
+  getCollections3Service,
+  getCollection3Service, 
 } from "../services/productServices";
 
 const initialState = {
@@ -18,6 +20,7 @@ const initialState = {
   product: {},
   cart: [],
 };
+
 
 const ProductState = ({ children }) => {
   const [globalState, dispatch] = useReducer(productReducer, initialState);
@@ -31,23 +34,6 @@ const ProductState = ({ children }) => {
     });
   }, []);
 
-  // const getProducts = async () => {
-  //   const response = await getProductsService();
-
-  //   dispatch({
-  //     type: "OBTENER_PRODUCTOS",
-  //     payload: response.data.data,
-  //   });
-  // };
-
-  // const getProduct = async (id) => {
-  //   const response = await getProductService(id);
-
-  //   dispatch({
-  //     type: "OBTENER_PRODUCTO",
-  //     payload: response.data.data,
-  //   });
-  // };
 
   const getProduct = useCallback(async (id) => {
     const response = await getProductService(id);
@@ -59,6 +45,34 @@ const ProductState = ({ children }) => {
   }, []);
 
 
+  const addProduct = async (id) => {
+
+    try {
+      const response = await getProductService(id);
+
+      dispatch({
+        type: "AGREGAR_PRODUCTO",
+        payload: response.data.data,
+      });
+
+      Swal.fire({
+        icon: "success",
+        title: "Producto agregado al carrito",
+        showConfirmButton: false,
+        timer: 2000,
+      });
+    } catch (error) {
+      //console.log(error)
+      Swal.fire({
+        icon: "error",
+        title: "Error en la peticion",
+        showConfirmButton: false,
+        timer: 2000,
+      });
+    }
+  };
+
+//-------------------------------------------------------------------  
   const getCollections = useCallback(async(id) => {
     const response = await getCollectionsService(id);
 
@@ -68,8 +82,9 @@ const ProductState = ({ children }) => {
     }); 
   }, []);
 
+  
   const getCollection = useCallback (async(id) => {
-    const response = await getCollectionService(id);
+   const response = await getCollectionService(id);
 
     dispatch ({
       type: "OBTENER_PRODUCTO",
@@ -77,6 +92,7 @@ const ProductState = ({ children }) => {
     });
   }, []);
   
+ 
   const addCollection = async (id) => {
     try {
       const response = await getCollectionService(id);
@@ -102,7 +118,7 @@ const ProductState = ({ children }) => {
     }
   }
 
-
+//-------------------------------------------------------------------
   const getCollections2 = useCallback(async(id) => {
     const response = await getCollections2Service(id);
 
@@ -146,16 +162,33 @@ const ProductState = ({ children }) => {
     }
   }
 
+//-------------------------------------------------------------------
+  const getCollections3 = useCallback(async(id) => {
+    const response = await getCollections3Service(id);
 
-  const addProduct = async (id) => {
+    dispatch ({
+      type: "OBTENER_PRODUCTOS",
+      payload: response.data.data,
+    }); 
+  }, []);
+
+  const getCollection3 = useCallback (async(id) => {
+    const response = await getCollection3Service(id);
+
+    dispatch ({
+      type: "OBTENER_PRODUCTO",
+      payload: response.data.data,
+    });
+  }, []);
+  
+  const addCollection3 = async (id) => {
     try {
-      const response = await getProductService(id);
+      const response = await getCollection3Service(id);
 
       dispatch({
         type: "AGREGAR_PRODUCTO",
         payload: response.data.data,
       });
-
       Swal.fire({
         icon: "success",
         title: "Producto agregado al carrito",
@@ -169,9 +202,12 @@ const ProductState = ({ children }) => {
         title: "Error en la peticion",
         showConfirmButton: false,
         timer: 2000,
-      });
+      });    
     }
-  };
+  }
+
+
+//-------------------------------------------------------------------
 
   const deleteCartProduct = (id) => {
     try {
@@ -209,6 +245,9 @@ const ProductState = ({ children }) => {
         getCollections2,
         getCollection2,
         addCollection2,
+        getCollections3,
+        getCollection3,
+        addCollection3,
         cart: globalState.cart,
         deleteCartProduct,
         vaciarCarrito,
