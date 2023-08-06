@@ -20,11 +20,12 @@ const CartPage = () => {
 
   return (
     <>
+    <div style={{backgroundImage: "linear-gradient(to right, WhiteSmoke , WhiteSmoke, Thistle)"}}>
       <main className="row">
         <article className="col">
           {cart.map((item) => (
-            <div key={item.id} className="card mb-3">
-              <div className="row g-0">
+            <div key={item.id} className="card mb-3 container">
+              <div className="row g-0 container">
                 <div className="col-md-4">
                   <img
                     src={item.image}
@@ -57,12 +58,12 @@ const CartPage = () => {
           ))}
         </article>
       </main>
-      <section className="row pb-5">
+      <section className="row pb-5" style={{marginLeft: "360px"}}>
         <article className="col">
           {cart.length > 0 ? (
             <>
-              <p className="fs-1">Total</p>
-              <p className="fs-2">$ {ammount} MXN</p>
+              <p className="fs-1" style={{textAlign: "center"}}>Total</p>
+              <p className="fs-2" style={{textAlign: "center"}}>$ {ammount} MXN</p>
               {user.user_name ? (
                 <>
                   <PaypalCheckoutButton
@@ -86,6 +87,7 @@ const CartPage = () => {
           )}
         </article>
       </section>
+      </div>
     </>
   );
 };
