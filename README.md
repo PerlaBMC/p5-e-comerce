@@ -1,6 +1,4 @@
-# Aplicacion web para compra de productos inteligentes "YourSmartLife"
-
-![Banner](/src/assets/Banner.PNG)
+# Aplicacion web para compra de productos "Uno Uno Shirt Ly Diego"
 
 ## El objetivo de esta aplicacion es que el usuario pueda comprar productos de una tienda online.
 
@@ -8,11 +6,8 @@
 
 | Categoria               | Description                                |
 | ----------------------- | ------------------------------------------ |
-| Electrico               | Productos relacionados con la electricidad |
-| Iluminacion             | La mejor iluminacion para tu casa          |
-| Electrodomesticos       | Lavadoras, secadoras, etc                  |
-| Video vigilancia        | Camaras inteligentes de alta resolucion    |
-| Inteligencia artificial | Asistentes virtuales                       |
+| Ropa                    | Camisetas con diseños unicos hechos a mano |
+
 
 ### En esta seccion se describen las librerias utilizadas y su proposito.
 
@@ -34,7 +29,7 @@
 
 Enlaces de interes para el proyecto.
 
-- Repositorio BE: https://github.com/JesusFz93/dwfs16-m3s21-ejercicio-auth
-- Repositorio FE: https://github.com/JesusFz93/dwfs16-m3s22-ejercicio-demo-app
+- Repositorio BE: https://github.com/PerlaBMC/p5-e-comerce
+- Repositorio FE: https://p5-backend-e-comerce.onrender.com
 
 - Aplicacion publicada: https://magnificent-beignet-b54199.netlify.app/
