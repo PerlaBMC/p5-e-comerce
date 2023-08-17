@@ -1,3 +1,5 @@
+//Colección individual Lisa S
+
 import { useContext, useEffect } from "react";
 import ProductContext from "../context/ProductContext";
 import { Link } from "react-router-dom";
